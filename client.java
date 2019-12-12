@@ -20,7 +20,7 @@ import java.net.Socket;
 public class client {
 
 	private static int PORT = 8080;
-	private static String HOST = "KRA-L-15";
+	private static String HOST = "172.31.1.150"; // server IP address
 	static int answer;
 	static InputStream input;
 	
