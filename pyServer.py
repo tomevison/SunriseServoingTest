@@ -14,8 +14,9 @@ class point(Structure):
 
 def server_program():
     # get the hostname
-    host = socket.gethostname()
-    port = 8080  # initiate port no above 1024
+    #host = socket.gethostname()
+    host = "172.31.1.151"
+    port = 30001  # initiate port no above 1024
 
     server_socket = socket.socket()  # get instance
     server_socket.bind((host, port))  # bind host address and port together
@@ -38,6 +39,7 @@ def server_program():
             windll.user32.GetCursorPos(byref(pt))
             data = "{},{}".format(pt.x,pt.y)
             conn.send(data.encode())  # send data to the client
+            #print(data)
 
         conn.close()  # close the connection
         print("Connection closed.. ")
